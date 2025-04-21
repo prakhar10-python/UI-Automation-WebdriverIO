@@ -1,5 +1,4 @@
-## Appium Automation testing for the flutter EXACT App
-
+## Appium Automation testing for the App Testing
 ###### -----------------------
 #   *** Requirements ***    
 ###### -----------------------
