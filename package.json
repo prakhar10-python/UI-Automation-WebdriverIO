@@ -1,0 +1,29 @@
+{
+  "name": "appium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio ./wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.16.11",
+    "chai": "^4.3.4",
+    "looks-same": "^8.2.1",
+    "moment": "^2.29.4",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0",
+    "webdriverio": "^8.15.4"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.32.4",
+    "@wdio/mocha-framework": "^7.16.11",
+    "@wdio/spec-reporter": "^7.16.11",
+    "chromedriver": "^96.0.0",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-light-reporter": "^0.2.7"
+  }
+}
