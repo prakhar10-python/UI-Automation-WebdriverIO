@@ -12,7 +12,7 @@ exports.config = {
     capabilities: [{
         platformName: 'Android',
         'appium:deviceName': 'CPH2467',
-        'appium:app': '/home/prakhar/Desktop/App Automation/App/ApiDemos-debug.apk',
+        'appium:app': apkPath,
         'appium:automationName': 'UiAutomator2',
         'appium:appPackage': 'io.appium.android.apis',
         'appium:appActivity': '.ApiDemos'
