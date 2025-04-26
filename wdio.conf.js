@@ -1,3 +1,4 @@
+require('mocha-tags')
 const path = require('path');
 const apkPath = path.resolve(__dirname, 'App/ApiDemos-debug.apk');
 exports.config = {
@@ -10,7 +11,7 @@ exports.config = {
     maxInstances: 10,
     capabilities: [{
         platformName: 'Android',
-        deviceName: 'realme RMX3231',
+        deviceName: '',
         app: apkPath,
         automationName: 'UiAutomator2',
         appPackage: "",
@@ -44,7 +45,10 @@ exports.config = {
   
     mochaOpts: {
         ui: 'bdd',
-        timeout: 600000000
+        timeout: 600000000,
+        require: 'mocha-tags',
+        grep: tagPattern
+
     },
 
     onComplete: function (exitCode, config, capabilities, results) {
