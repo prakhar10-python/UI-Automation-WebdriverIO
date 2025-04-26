@@ -10,11 +10,11 @@ exports.config = {
     maxInstances: 10,
     capabilities: [{
         platformName: 'Android',
-        deviceName: 'realme RMX3231',
+        deviceName: '54e87fdf',
         app: apkPath,
         automationName: 'UiAutomator2',
-        appPackage: "",
-        appActivity: ""
+        appPackage: "io.appium.android.apis",
+        appActivity: ".ApiDemos"
     }],
     logLevel: 'info',
     // If you only want to run your tests until a specific amount of tests have failed use
