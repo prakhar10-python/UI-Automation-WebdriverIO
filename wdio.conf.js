@@ -11,11 +11,11 @@ exports.config = {
     maxInstances: 10,
     capabilities: [{
         platformName: 'Android',
-        deviceName: '54e87fdf',
-        app: apkPath,
-        automationName: 'UiAutomator2',
-        appPackage: "io.appium.android.apis",
-        appActivity: ".ApiDemos"
+        'appium:deviceName': 'CPH2467',
+        'appium:app': '/home/prakhar/Desktop/App Automation/App/ApiDemos-debug.apk',
+        'appium:automationName': 'UiAutomator2',
+        'appium:appPackage': 'io.appium.android.apis',
+        'appium:appActivity': '.ApiDemos'
     }],
     logLevel: 'info',
     // If you only want to run your tests until a specific amount of tests have failed use
@@ -31,29 +31,29 @@ exports.config = {
     connectionRetryCount: 3,
     services: ['appium'],
     port: 4723,
-    path: '/wd/hub',
+    path: '/',
     framework: 'mocha',
     // reporters: ['spec'],
-    reporters: ['spec', ['light',{
+    reporters: ['spec', ['light', {
         outputDir: './Results',
-        outputFile:"demo",    // html report file will be name this 
+        outputFile: "demo",    // html report file will be name this 
         addScreenshots: false,   // to add screenshots in report make it as true. Default is false
         //autoClean:false       // removed autoClean and include the same functionality as default in mergeResult function
     }]
 
-  ],
-  
+    ],
+
     mochaOpts: {
         ui: 'bdd',
         timeout: 600000000,
         require: 'mocha-tags',
-        grep: tagPattern
+        //grep: tagPattern
 
     },
 
     onComplete: function (exitCode, config, capabilities, results) {
         const mergeResults = require("wdio-light-reporter/src/mergeResults"); //you can add this on top of the file
         mergeResults("./Results");
-     },
-        
+    },
+
 } 
