@@ -1,8 +1,9 @@
+require('mocha-tags')
 const path = require('path');
-const apkPath = path.resolve(__dirname, 'App');
+const apkPath = path.resolve(__dirname, 'App/ApiDemos-debug.apk');
 exports.config = {
     specs: [
-        ""
+        "test/specs/homeTest.e2.js"
     ],
     exclude: [
         // 'path/to/excluded/files'
@@ -44,7 +45,10 @@ exports.config = {
   
     mochaOpts: {
         ui: 'bdd',
-        timeout: 600000000
+        timeout: 600000000,
+        require: 'mocha-tags',
+        grep: tagPattern
+
     },
 
     onComplete: function (exitCode, config, capabilities, results) {
